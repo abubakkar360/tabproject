@@ -1,0 +1,235 @@
+*{
+    box-sizing: border-box;
+}
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* background-color: aqua; */
+}
+@media only screen and (min-width: 480px){
+    .col-md-1{
+        width: 8.33333333%;
+    }
+    .col-md-2{
+        width: 16.66666667%;
+    }
+    .col-md-3{
+        width: 25%;
+    }
+    .col-md-4{
+        width: 33.33333333%;
+    }
+    .col-md-5{
+        width: 41.66666667%;
+    }
+    .col-md-6{
+        width: 50%;
+    }
+    .col-md-7{
+        width: 58.33333333%;
+    }
+    .col-md-8{
+        width: 66.66666667%;
+    }
+    .col-md-9{
+        width: 75%;
+    }
+    .col-md-10{
+        width: 83.33333333%;
+    }
+    .col-md-11{
+        width: 91.666666667%;
+    }
+    .col-md-12{
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 768px){
+    .col-l-1{
+        width: 8.33333333%;
+    }
+    .col-l-2{
+        width: 16.66666667%;
+    }
+    .col-l-3{
+        width: 25%;
+    }
+    .col-l-4{
+        width: 33.33333333%;
+    }
+    .col-l-5{
+        width: 41.66666667%;
+    }
+    .col-l-6{
+        width: 50%;
+    }
+    .col-l-7{
+        width: 58.33333333%;
+    }
+    .col-l-8{
+        width: 66.66666667%;
+    }
+    .col-l-9{
+        width: 75%;
+    }
+    .col-l-10{
+        width: 83.33333333%;
+    }
+    .col-l-11{
+        width: 91.666666667%;
+    }
+    .col-l-12{
+        width: 100%;
+    }
+}
+.fixed{
+    width:3rem;
+    border: none;
+    background: transparent;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem ;
+    animation: bounce 1s ease-in-out 0.1s infinite alternate-reverse both;
+    visibility: hidden;
+}
+.showBtn{
+    visibility: visible;
+}
+@keyframes bounce {
+    from{
+        width:3rem;
+    }to{
+        width: 4rem;
+    }
+}
+.section{
+    max-width:100vw;
+    height: 100vh;  
+    text-transform: capitalize;
+}
+.section h2{
+    background-color: aqua;
+    padding: 1rem;
+}
+.section h2 span{
+    color: antiquewhite;
+}
+#home{
+    background: url('images/20220117_105451.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100%;
+}
+#header{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    /* background-color: aqua; */
+}
+#header div{
+    align-content: center;
+}
+h2{
+    margin: 0;
+}
+.section_main{
+    width: 100%;
+    text-align: center;
+}
+.logo{
+    width: 20%;
+    text-align: start;
+}
+.logo img{
+    width: 6rem;
+    margin: 0;
+    padding: 1rem 0 1rem 1rem;
+}
+
+.navbar{
+    width: 60%;
+    font-size: 1.5rem;
+    height: auto;
+}
+.fixedNav{
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: white;
+    width: 100%;
+    
+}
+.fixedNav .ul li a{
+    color: black;
+}
+.navbar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    height: auto !important;
+}
+.navbar ul li a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: antiquewhite;
+}
+.social_icons{
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    padding-right: 1rem;
+}
+.social_icons img{
+    width: 1.5rem;
+    margin: 0;
+}
+.footer{
+    background-color: black;
+    color:wheat;
+    min-height: 50vh;
+}
+@media (max-width:1000px){
+    .logo{
+        width: 50%;
+        order: 1;
+    }
+    .navbar{
+        width: 100%;
+        order: 3;
+        height: 0;
+        overflow: hidden;
+    }
+    .show_links{
+        height: 10rem;
+        transition-duration: 1s;
+    }
+    .navbar ul{
+        flex-direction: column;
+        text-align: left;
+    }
+    .social_icons{
+        display: none;
+    }
+    .hamburg{
+        width: 50%;
+        text-align: end;
+        order: 2;
+    }
+    .hamburg img:hover{
+        transform: rotate(90deg);
+        transition-duration: 1s;
+    }
+    .hamburg img{
+        width: 3rem;
+        padding-right: 1rem;
+    }
+}
