@@ -53,7 +53,7 @@ scrollLinks.forEach(function(scrollLink){
         let position = element.offsetTop - linksHeight;
         const navHeight = navbar.getBoundingClientRect().height
         const containerHeight = navbar.classList.contains('fixedNav');
-        if(linksHeight > 104){
+        if(linksHeight > 82){
             position=position+navHeight
         }
         window.scrollTo({
@@ -63,4 +63,46 @@ scrollLinks.forEach(function(scrollLink){
         navbar.style.height = 0;
         
     })
+});
+
+// tab section
+
+// const btns = document.querySelectorAll('.btn');
+// const about = document.querySelector('.content')
+// const articles = document.querySelectorAll('.subcontent')
+// about.addEventListener('click',function(e){
+//     const id = e.target.dataset.id;
+//     console.log(id);
+//     if(id){
+//         btns.forEach(function(btn){
+//             btn.classList.remove('active');
+//             e.target.classList.add('active')
+//         })
+//         articles.forEach(function(article){
+//            article.classList.remove('active')
+//         })
+//         const element = document.getElementById(id);
+//         element.classList.add('active')
+//     }
+// })
+const btns = document.querySelectorAll('.btn');
+const about = document.querySelector('.content');
+const articles = document.querySelectorAll('.subcontent');
+
+about.addEventListener('click',function(e){
+    const id = e.target.dataset.id;
+    
+    if(id){
+        btns.forEach(function(btn){
+            
+            btn.classList.remove('active');
+            e.target.classList.add('active')
+            
+        })
+        articles.forEach(function(article){
+            const element = document.getElementById(id)
+            article.classList.remove('active')
+            element.classList.add('active')
+        })
+    }
 })
